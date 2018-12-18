@@ -37,17 +37,18 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 
 ### Association
+- has_many :users, through: members
+- has_many :messages
 - has_many :members
-- belongs_to :user, through: members
 
 ## membersテーブル
 
