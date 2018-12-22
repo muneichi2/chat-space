@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+  .chat {
+    width: calc(100% - 300px);
+    .header {
+      box-sizing: border-box;
+      height: 100px;
+      padding: 0 40px;
+      &--group-name {
+        float: left;
+        margin-top: 35px;
+        color: #333333;
+        font-size: 20px;
+      }
+      &__btn {
+        float: right;
+        border: 1px solid $lightblue;
+        height: 40px;
+        padding: 0 20px;
+        margin-top: 28px;
+        line-height: 40px;
+      }
+      &__member {
+        clear: both;
+        margin-top: 15px;
+        color: #999999;
+        font-size: 12px;
+        display: flex;
+        &__member-name {
+          display: inline-block;
+          padding-right: 5px;
+        }
+      }
+    }
+    .body {
+      box-sizing: border-box;
+      height: calc(100vh - 100px - 90px);
+      border: 1px solid #eeeeee;
+      .message {
+        padding: 46px 40px 0;
+        display: flex;
+        &__user {
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+        }
+        &__time {
+        padding-left: 10px;
+        color: #999999;
+        font-size: 12px;
+        }
+      }
+      .message__content {
+        padding-left: 40px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        color: #434a54;
+        font-size: 14px;
+      }
+    }
+    .form {
+      box-sizing: border-box;
+      background-color: #B8C3C7;
+      height: 90px;
+      padding: 20px 50px 20px 40px;
+      &__message {
+        border: none;
+        float: left;
+        height: 50px;
+        width: calc(100% - 150px);
+      }
+      &__file {
+        background-color: $white;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          line-height: 50px;
+          font-size: 20px;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+      &__submit {
+        float: right;
+        background-color: $lightblue;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+}

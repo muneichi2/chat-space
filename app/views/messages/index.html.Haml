@@ -1,0 +1,31 @@
+.wrapper
+  = render 'side_bar'
+
+  .chat
+    .header
+      .header--group-name
+        グループ名
+      %a.header__btn
+        Edit
+      .header__member
+        Member:
+        .header__member-name
+          メンバー名
+
+    .body
+      .message
+        .message__user
+          ユーザー名
+        .message__time
+          2018/12/19 00:00:00
+      .message__content
+        message
+
+    .form
+      %input.form__message
+      .form__file
+        %label.form__file__image
+          %label.fa_icon
+            = fa_icon 'image', class: 'icon'
+            %input.hidden{type: 'file'}
+      %input.form__submit{type: 'submit', value: 'Send'}
