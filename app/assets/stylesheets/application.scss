@@ -2,9 +2,9 @@
 *= require font-awesome
 */
 
-
 @import "./reset";
 @import "config/colors";
 @import "mixin/mixin";
 @import "modules/side_bar";
 @import "modules/chat";
+@import "modules/user";
