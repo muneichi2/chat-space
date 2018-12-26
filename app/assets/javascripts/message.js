@@ -14,7 +14,8 @@ $(function(){
                     </div>
                   </div>
                   <div class="lower-message">
-                    <p class="lower-message__content">${message.text}
+                    <p class="lower-message__content">
+                      ${message.text}
                     </p>
                   </div>
                   ${image}
@@ -41,13 +42,15 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
+    })
+    .fail(function(){
+      alert('error');
+    })
+    .always(function(){
       $('.form__message').val('');
       $('.form__submit').prop("disabled", false);
       $('form')[0].reset();
       scroll()
-    })
-    .fail(function(){
-      alert('error');
     })
   });
 });
