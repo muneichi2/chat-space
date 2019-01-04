@@ -17,7 +17,8 @@
     .chat-group-form__field--right
       .chat-group-form__search.clearfix
       .js-user-search-result
-      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text", name: "input"}
+        #user-search-field.chat-group-form__input
+          = f.text_field :name, class: 'chat-group-form__input',placeholder: '追加したいユーザー名を入力してください', type: 'text'
       #user-search-result
 
   .chat-group-form__field.clearfix
@@ -31,7 +32,7 @@
             %p.chat-group-user
             =user.name
             -unless user.id == current_user.id
-              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove{'data-user-id': user.id}削除
+              .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove{'data-user-id': user.id}削除
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left

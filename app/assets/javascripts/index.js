@@ -33,7 +33,7 @@ $(function(){
                         </div>`
     current_user_list.append(add_name_html);
   }
-  $('#user-search-field.chat-group-form__input').on('keyup', function(e){
+  $('.chat-group-form__input').on('keyup', function(e){
     e.preventDefault();
     var input = $(this).val();
     if(input.length == 0){
