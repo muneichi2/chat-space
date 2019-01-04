@@ -70,7 +70,7 @@
 
     .chat-group-form__input {
       float: left;
-      width: 100%;
+      width: 630px;
       line-height: 30px;
       padding: 10px 15px;
       box-sizing: border-box;
@@ -78,15 +78,26 @@
   }
 
   .chat-group-user {
-    padding: 0 15px;
     line-height: 50px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
+    clear: both;
     &:after {
       content: "";
       clear: both;
       display: block;
     }
+
+  .chat-group-user-name {
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    width: 70%;
+    float: right;
+    clear: both;
+  }
+
 
     .chat-group-user__name {
       float: left;
@@ -115,3 +126,6 @@
     border: 0;
   }
 }
+  #group_name {
+    width: 100%;
+  }
