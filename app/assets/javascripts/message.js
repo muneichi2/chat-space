@@ -53,4 +53,30 @@ $(function(){
       scroll()
     })
   });
+
+$(function(){
+  setInterval(update, 5000);
+})
+  function update(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+    var data = $('.message').last().data('message-id');
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      data: { id: data },
+      dataType: 'json'
+    })
+    .done(function(data){
+      console.log(data);
+      data.forEach(function(message){
+      var html = buildHTML(message);
+      $('.messages').append(html);
+      scroll()
+      })
+    })
+    .fail(function(){
+      alert('自動更新に失敗しました');
+    })
+    }
+  }
 });
