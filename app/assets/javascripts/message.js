@@ -68,9 +68,9 @@ $(function(){
     })
     .done(function(data){
       data.forEach(function(message){
-      var html = buildHTML(message);
-      $('.messages').append(html);
-      scroll()
+        var html = buildHTML(message);
+        $('.messages').append(html);
+        scroll()
       })
     })
     .fail(function(){
