@@ -5,14 +5,16 @@
     .header
       .left-header
         .left-header__title
-          test
+        = @group.name
         %ul.left-header__members
           Member：
           %li.member
-            muneichi
+            - @group.users.each do |user|
+              = user.name
+
       .right-header
         .right-header__button
-          Edit
+          = link_to 'Edit', edit_group_path(@group), class: 'right-header__button'
 
     .messages
       = render @messages
