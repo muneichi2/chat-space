@@ -68,7 +68,15 @@
       text-align: right;
     }
 
-    .chat-group-form__input {
+    .chat-group-form__input-group {
+      float: left;
+      width: 630px;
+      line-height: 30px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+    }
+
+    .chat-group-form__input-user {
       float: left;
       width: 630px;
       line-height: 30px;

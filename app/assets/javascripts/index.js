@@ -33,7 +33,7 @@ $(function(){
                         </div>`
     current_user_list.append(add_name_html);
   }
-  $('.chat-group-form__input').on('keyup', function(e){
+  $('.chat-group-form__input-user').on('keyup', function(e){
     e.preventDefault();
     var input = $(this).val();
     if(input.length == 0){
@@ -45,17 +45,17 @@ $(function(){
       data: { keyword : input },
       dataType: 'json'
     })
+
     .done(function(users){
-      $(".user-search-result").empty();
+      $("#user-search-result").empty();
       if (users.length !== 0 ){
         users.forEach(function(user){
-        appendUser(user);
-    });
-    }
-      else {
+          appendUser(user);
+        });
+      } else {
         appendNoUser("一致するユーザーは存在しません");
       }
-  })
+    })
     .fail(function(){
       alert('error');
     });
